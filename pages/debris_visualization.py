@@ -8,10 +8,10 @@ Original file is located at
 """
 
 import streamlit as st
-from Utils import load_debris_gdf
+import geopandas as gpd
 from streamlit_folium import st_folium
 
-debris_gdf = load_debris_gdf("debris_gdf.geojson")
+debris_gdf = gpd.read_file("debris_gdf.geojson")
 
 st.set_page_config(
     page_title="Debris Visualization",
