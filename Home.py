@@ -20,11 +20,3 @@ st.markdown("""
     .description {text-align: center; font-size: 1.2rem; color: #3c763d;}
 </style>
 """, unsafe_allow_html=True)
-
-st.markdown("<h1 class='main-header'>Floater Debris Visualization</h1>", unsafe_allow_html=True)
-st.markdown("""
-<p class='description'>
-    Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
-    It's recommended to select locations shown with higher levels of floater debris.
-</p>
-""", unsafe_allow_html=True)
