@@ -28,7 +28,7 @@ if not debris_gdf.empty:
     </p>
     """, unsafe_allow_html=True)
 
-    debris_gdf.explore(
+    m = debris_gdf.explore(
         color='red',
         tooltip=['latitude', 'longitude', 'confidence_score'],
         popup=['latitude', 'longitude', 'confidence_score', 'location'],
