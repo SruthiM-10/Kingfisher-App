@@ -20,8 +20,20 @@ st.set_page_config(
 
 if not debris_gdf.empty:
     st.subheader("Interactive Marine Debris Map")
+    st.markdown("""
+    <p class='description'>
+        Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
+        It's recommended to select locations shown with higher levels of floater debris.
+    </p>
+    """, unsafe_allow_html=True)
 
-    m = debris_gdf.explore()
+    m = debris_gdf.explore(
+        color='red',
+        tooltip=['latitude', 'longitude', 'FDI'],
+        popup=['latitude', 'longitude', 'FDI', 'location'],
+        marker_kwds={'radius': 2}, 
+        name="Detected Debris"
+    )
 
     st_folium(m, width=700, height=500)
 else:
