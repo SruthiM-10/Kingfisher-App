@@ -28,11 +28,11 @@ if not debris_gdf.empty:
     </p>
     """, unsafe_allow_html=True)
 
-    m = debris_gdf.explore(
+    debris_gdf.explore(
         color='red',
-        tooltip=['latitude', 'longitude', 'FDI'],
-        popup=['latitude', 'longitude', 'FDI', 'location'],
-        marker_kwds={'radius': 2}, 
+        tooltip=['latitude', 'longitude', 'confidence_score'],
+        popup=['latitude', 'longitude', 'confidence_score', 'location'],
+        marker_kwds={'radius': 2},
         name="Detected Debris"
     )
 
