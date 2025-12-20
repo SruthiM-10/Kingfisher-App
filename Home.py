@@ -20,3 +20,5 @@ st.markdown("""
     .description {text-align: center; font-size: 1.2rem; color: #3c763d;}
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown("<h1 class='main-header'>Kingfisher Home Page</h1>", unsafe_allow_html=True)
