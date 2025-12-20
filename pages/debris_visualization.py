@@ -24,7 +24,7 @@ if not debris_gdf.empty:
     <p class='description'>
         Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
         We have focused our data collection on inland waterways.
-        It's recommended to select locations shown with higher levels of floater debris. 
+        It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
     </p>
     """, unsafe_allow_html=True)
 
