@@ -19,11 +19,12 @@ st.set_page_config(
 )
 
 if not debris_gdf.empty:
-    st.subheader("Interactive Marine Debris Map")
+    st.subheader("Interactive Fluvian Debris Map")
     st.markdown("""
     <p class='description'>
         Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
-        It's recommended to select locations shown with higher levels of floater debris.
+        We have focused our data collection on inland waterways.
+        It's recommended to select locations shown with higher levels of floater debris. 
     </p>
     """, unsafe_allow_html=True)
 
