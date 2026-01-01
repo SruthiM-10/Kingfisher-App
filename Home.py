@@ -9,6 +9,7 @@ Original file is located at
 
 import streamlit as st
 import geopandas as gpd
+from streamlit_folium import st_folium
 
 # st.set_page_config(
 #     page_title="Kingfisher Home Page",
