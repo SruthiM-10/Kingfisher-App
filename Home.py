@@ -24,12 +24,12 @@ import geopandas as gpd
 
 # st.markdown("<h1 class='main-header'>Kingfisher Home Page</h1>", unsafe_allow_html=True)
 
-debris_gdf = gpd.read_file("detected_marine_debris.geojson")
-
 st.set_page_config(
     page_title="Debris Visualization",
     layout="centered"
 )
+
+debris_gdf = gpd.read_file("detected_marine_debris.geojson")
 
 if not debris_gdf.empty:
     st.subheader("Interactive Fluvian Debris Map")
