@@ -30,6 +30,25 @@ st.set_page_config(
     layout="centered"
 )
 
+st.markdown("""
+    <style>
+        .stApp {
+            background-color: #FFFFFF;
+        }
+        
+        h1, h2, h3, p {
+            color: #1E1E1E !important;
+        }
+
+        .description {
+            text-align: center; 
+            font-size: 1.2rem; 
+            color: #3c763d;
+            padding-bottom: 20px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
 debris_gdf = gpd.read_file("detected_marine_debris.geojson")
 
 if not debris_gdf.empty:
@@ -39,7 +58,6 @@ if not debris_gdf.empty:
         Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
         We have focused our data collection on inland waterways.
         It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
-
         Click a dot to get its specific location.
     </p>
     """, unsafe_allow_html=True)
