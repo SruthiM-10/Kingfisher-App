@@ -33,7 +33,7 @@ st.set_page_config(
 debris_gdf = gpd.read_file("detected_marine_debris.geojson")
 
 if not debris_gdf.empty:
-    st.subheader("Interactive Fluvian Debris Map")
+    st.subheader("Interactive Debris Map for Waterways")
     st.markdown("""
 <p class='description'>
 Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
