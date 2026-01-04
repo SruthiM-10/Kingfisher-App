@@ -58,6 +58,8 @@ if not debris_gdf.empty:
         Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
         We have focused our data collection on inland waterways.
         It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
+        
+        An example has been loaded below showing debris along Sacramento River.
         Click a dot to get its specific location.
     </p>
     """, unsafe_allow_html=True)
