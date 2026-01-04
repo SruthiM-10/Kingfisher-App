@@ -35,14 +35,14 @@ debris_gdf = gpd.read_file("detected_marine_debris.geojson")
 if not debris_gdf.empty:
     st.subheader("Interactive Fluvian Debris Map")
     st.markdown("""
-    <p class='description'>
-        Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
-        We have focused our data collection on inland waterways.
-        It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
-        <br><br>
-        An example has been loaded below showing debris along Sacramento River.
-        Click a dot to get its specific location.
-    </p>
+<p class='description'>
+Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
+We have focused our data collection on inland waterways.
+It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
+<br><br>
+An example has been loaded below showing debris along Sacramento River.
+Click a dot to get its specific location.
+</p>
     """, unsafe_allow_html=True)
 
     m = debris_gdf.explore(
