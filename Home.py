@@ -32,27 +32,27 @@ st.set_page_config(
 
 debris_gdf = gpd.read_file("detected_marine_debris.geojson")
 
-# if not debris_gdf.empty:
-#     st.subheader("Interactive Fluvian Debris Map")
-#     st.markdown("""
-# <p class='description'>
-# Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
-# We have focused our data collection on inland waterways.
-# It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
-# <br><br>
-# An example has been loaded below showing debris along Sacramento River.
-# Click a dot to get its specific location.
-# </p>
-#     """, unsafe_allow_html=True)
+if not debris_gdf.empty:
+    st.subheader("Interactive Fluvian Debris Map")
+    st.markdown("""
+<p class='description'>
+Welcome to our floater debris visualization to help you select the best location to deploy your Kingfisher.
+We have focused our data collection on inland waterways.
+It's recommended to select locations that show higher levels of floater debris along your chosen waterway. 
+<br><br>
+An example has been loaded below showing debris along Sacramento River.
+Click a dot to get its specific location.
+</p>
+    """, unsafe_allow_html=True)
 
-#     m = debris_gdf.explore(
-#         color='red',
-#         tooltip=['latitude', 'longitude', 'confidence_score'],
-#         popup=['latitude', 'longitude', 'confidence_score', 'location'],
-#         marker_kwds={'radius': 2},
-#         name="Detected Debris"
-#     )
+    m = debris_gdf.explore(
+        color='red',
+        tooltip=['latitude', 'longitude', 'confidence_score'],
+        popup=['latitude', 'longitude', 'confidence_score', 'location'],
+        marker_kwds={'radius': 2},
+        name="Detected Debris"
+    )
 
-#     st_folium(m, width=700, height=500)
-# else:
-#     st.warning("No debris detected to display on the map.")
+    st_folium(m, width=700, height=500)
+else:
+    st.warning("No debris detected to display on the map.")
