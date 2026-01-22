@@ -74,7 +74,15 @@ if not debris_gdf.empty:
             )
         ).add_to(m)
 
-    st_folium(m, width=700, height=500)
+    output = st_folium(
+        m,
+        width=700,
+        height=500,
+        returned_objects=["last_clicked"]
+    )
+    
+    if output.get("last_clicked"):
+        st.write(output["last_clicked"])
 
 else:
     st.warning("No debris detected to display on the map.")
