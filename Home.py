@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import geopandas as gpd
 import folium
-from streamlit_folium import st_folium
+from streamlit_folium import st_folium, folium_static
 
 # st.set_page_config(
 #     page_title="Kingfisher Home Page",
@@ -74,15 +74,7 @@ if not debris_gdf.empty:
             )
         ).add_to(m)
 
-    output = st_folium(
-        m,
-        width=700,
-        height=500,
-        returned_objects=[""]
-    )
-    
-    if output.get("last_clicked"):
-        st.write(output["last_clicked"])
+    folium_static(m, width=700, height=500)
 
 else:
     st.warning("No debris detected to display on the map.")
