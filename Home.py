@@ -78,7 +78,7 @@ if not debris_gdf.empty:
         m,
         width=700,
         height=500,
-        returned_objects=["last_clicked"]
+        returned_objects=[""]
     )
     
     if output.get("last_clicked"):
