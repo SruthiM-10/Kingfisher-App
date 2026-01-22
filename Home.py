@@ -9,6 +9,7 @@ Original file is located at
 
 import streamlit as st
 import geopandas as gpd
+import folium
 from streamlit_folium import st_folium
 
 # st.set_page_config(
